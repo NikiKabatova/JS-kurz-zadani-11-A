@@ -1,0 +1,1 @@
+# JS-kurz-zadani-11-A
