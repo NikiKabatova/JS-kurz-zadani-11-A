@@ -159,11 +159,11 @@ function(a){a=P(a);for(var c=v.length;c--;)for(var d=v[c],b=d.animations,f=b.len
 var _animejs = _interopRequireDefault(require("animejs"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 var ball = document.querySelector('.ball');
-(0, _animejs.default)({
+var mover = (0, _animejs.default)({
   targets: ball,
   translateX: [{
-    value: 100,
-    duration: 1200
+    value: 300,
+    duration: 1500
   }, {
     value: 0,
     duration: 800
@@ -171,6 +171,26 @@ var ball = document.querySelector('.ball');
   rotate: '1turn',
   duration: 2000,
   loop: true
+});
+ball.addEventListener('click', function () {
+  mover.pause();
+  mover = (0, _animejs.default)({
+    targets: ball,
+    translateX: '+=0',
+    translateY: {
+      value: 300,
+      duration: 4000
+    },
+    scale: {
+      value: 0.5,
+      duration: 800,
+      delay: 100
+    },
+    complete: function complete() {
+      console.log('space ship destroyed');
+      ball.remove();
+    }
+  });
 });
 },{"animejs":"node_modules/animejs/anime.min.js"}],"../../../.nvm/versions/node/v10.24.1/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -197,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50039" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52421" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
