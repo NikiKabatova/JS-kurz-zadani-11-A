@@ -1,0 +1,24 @@
+{
+  "name": "balls",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "animejs": "^2.2.0"
+  },
+  "devDependencies": {},
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikiKabatova/JS-kurz-zadani-11-A.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NikiKabatova/JS-kurz-zadani-11-A/issues"
+  },
+  "homepage": "https://github.com/NikiKabatova/JS-kurz-zadani-11-A#readme"
+}
